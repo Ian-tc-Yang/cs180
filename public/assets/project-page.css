@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@1,6..72,500&display=swap');
+
+:root {
+  --navy: #003262;
+  --navy-deep: #07192c;
+  --gold: #fdb515;
+  --cream: #f6f1e7;
+  --muted: #64717f;
+  --line: rgba(12, 28, 44, 0.14);
+  color: #0c1c2c;
+  font-family: 'Manrope', system-ui, sans-serif;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 320px; background: var(--cream); }
+a { color: inherit; text-decoration: none; }
+
+.page-nav,
+.placeholder {
+  padding-inline: max(24px, calc((100vw - 1050px) / 2));
+}
+
+.page-nav {
+  display: flex;
+  min-height: 76px;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--line);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  font-size: .8rem;
+  font-weight: 700;
+}
+
+.brand-mark {
+  display: grid;
+  width: 36px;
+  height: 36px;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--navy);
+  color: white;
+  font-family: 'DM Mono', monospace;
+  font-size: .68rem;
+}
+
+.back-link { color: #465667; font-size: .75rem; font-weight: 600; }
+
+.placeholder {
+  position: relative;
+  display: flex;
+  min-height: calc(100vh - 76px);
+  align-items: center;
+  overflow: hidden;
+  background:
+    linear-gradient(rgba(0, 50, 98, .055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 50, 98, .055) 1px, transparent 1px);
+  background-size: 42px 42px;
+}
+
+.placeholder::after {
+  position: absolute;
+  top: 50%;
+  right: -125px;
+  width: 430px;
+  height: 430px;
+  border: 70px solid var(--gold);
+  border-radius: 50%;
+  content: '';
+  opacity: .92;
+  transform: translateY(-50%);
+}
+
+.placeholder-copy { position: relative; z-index: 1; max-width: 760px; padding-block: 80px; }
+.kicker {
+  margin: 0 0 20px;
+  color: var(--navy);
+  font-family: 'DM Mono', monospace;
+  font-size: .66rem;
+  font-weight: 500;
+  letter-spacing: .11em;
+  text-transform: uppercase;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(3.3rem, 9vw, 7rem);
+  font-weight: 600;
+  letter-spacing: -.065em;
+  line-height: .92;
+}
+
+h1 em {
+  color: var(--navy);
+  font-family: 'Newsreader', Georgia, serif;
+  font-weight: 500;
+}
+
+.status {
+  margin: 28px 0 0;
+  color: var(--muted);
+  font-size: .9rem;
+}
+
+@media (max-width: 720px) {
+  .placeholder { align-items: flex-start; }
+  .placeholder::after { top: auto; right: -260px; bottom: -235px; transform: none; }
+  .placeholder-copy { padding-top: 110px; }
+}
