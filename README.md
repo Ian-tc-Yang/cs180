@@ -1,45 +1,63 @@
-# Ian Yang — UC Berkeley CS 180 Portfolio
+# Ian Yang | UC Berkeley CS 180 Portfolio
 
-A responsive portfolio for CS 180: Intro to Computer Vision and Computational Photography. It is designed for recruiters, professors, and collaborators to review each project as a concise visual case study.
+> Computer Vision & Computational Photography — selected coursework and visual experiments by Ian Yang, UC Berkeley EECS.
 
-## Live site
+[![Live Portfolio](https://img.shields.io/badge/Live_Portfolio-003262?style=for-the-badge&logo=githubpages&logoColor=white)](https://ian-tc-yang.github.io/cs180/)
+[![Résumé](https://img.shields.io/badge/Résumé-FDB515?style=for-the-badge&logo=readme&logoColor=07192C)](https://ian-tc-yang.github.io/cs180/resume/ian-yang-resume.pdf)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/ian--yang)
 
-[ian-tc-yang.github.io/cs180](https://ian-tc-yang.github.io/cs180/)
+![CS 180 portfolio preview](public/og.png)
 
-## Project structure
+## About this portfolio
+
+This repository presents my work from **UC Berkeley CS 180: Introduction to Computer Vision and Computational Photography**. The portfolio is organized as a set of concise, visual case studies so that recruiters, professors, and collaborators can quickly review the problems, methods, experiments, and results behind each project.
+
+The **Final Project** is featured first, followed by Projects 0–4. Individual write-ups are being added progressively; each route and media directory is already prepared for its project content.
+
+## Explore the projects
+
+| Project | Focus | Portfolio page |
+| --- | --- | --- |
+| **Final Project** | Featured capstone work | [View project](https://ian-tc-yang.github.io/cs180/final/) |
+| **Project 0** | Camera & Perspective | [View project](https://ian-tc-yang.github.io/cs180/project0/) |
+| **Project 1** | Images of the Russian Empire | [View project](https://ian-tc-yang.github.io/cs180/project1/) |
+| **Project 2** | Filters & Frequencies | [View project](https://ian-tc-yang.github.io/cs180/project2/) |
+| **Project 3** | Face Morphing | [View project](https://ian-tc-yang.github.io/cs180/project3/) |
+| **Project 4** | Image Warping & Mosaics | [View project](https://ian-tc-yang.github.io/cs180/project4/) |
+
+## Portfolio highlights
+
+- Responsive, accessible presentation optimized for desktop and mobile review
+- Berkeley-inspired visual system with clear project-first navigation
+- Dedicated write-up and media directories for every assignment
+- Automated GitHub Pages deployment on every update to `main`
+- Direct links to my [résumé](https://ian-tc-yang.github.io/cs180/resume/ian-yang-resume.pdf), [LinkedIn](https://www.linkedin.com/in/ian--yang), and [GitHub profile](https://github.com/Ian-tc-Yang)
+
+## Technology
+
+`React` · `TypeScript` · `Vite` · `HTML/CSS` · `GitHub Actions` · `GitHub Pages`
+
+## Repository structure
 
 ```text
 cs180/
-├── homepage                    # React/Vite homepage
-├── project0/
-│   ├── index.html              # Project 0 write-up
-│   └── media/                  # Project 0 images and video
-├── project1/ … project4/
-└── final/
-    ├── index.html              # Final project write-up
-    └── media/                  # Final project assets
+├── src/                         # React homepage and shared styling
+├── public/
+│   ├── final/                   # Final project write-up and media
+│   ├── project0/ … project4/    # Assignment pages and media folders
+│   └── resume/                  # Public résumé PDF
+└── .github/workflows/           # Automated Pages deployment
 ```
 
-The project pages live under `public/`, so Vite copies them into the deployed site without changing their URLs.
-
-## Add project content
-
-1. Put images, GIFs, and videos in the matching `public/projectN/media/` directory.
-2. Edit that project’s `public/projectN/index.html` file.
-3. Use paths such as `media/result.jpg` inside the project page.
-4. Commit and push to `main`; GitHub Actions republishes the portfolio automatically.
-
-## Local development
+## Run locally
 
 ```bash
 npm install
 npm run dev
 ```
 
-## Production build
+Create a production build with `npm run build`. The GitHub Actions workflow publishes the generated site automatically after changes are pushed to `main`.
 
-```bash
-npm run build
-```
+---
 
-The build output is written to `dist/` and deployed by [the GitHub Pages workflow](.github/workflows/deploy.yml).
+© Ian Yang · UC Berkeley EECS

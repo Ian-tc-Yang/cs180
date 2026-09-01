@@ -273,7 +273,7 @@ footer {
   left: 28px;
   color: var(--navy);
   font-family: 'DM Mono', monospace;
-  font-size: 0.74rem;
+  font-size: clamp(0.88rem, 1.3vw, 1rem);
   font-weight: 500;
   letter-spacing: 0.045em;
 }

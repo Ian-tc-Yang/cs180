@@ -106,6 +106,36 @@ h1 em {
   font-size: .9rem;
 }
 
+.resume-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.resume-button {
+  display: inline-flex;
+  min-height: 46px;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+  border: 1px solid var(--navy);
+  color: var(--navy);
+  font-size: .78rem;
+  font-weight: 700;
+  transition: background 180ms ease, color 180ms ease;
+}
+
+.resume-button:hover,
+.resume-button--primary {
+  background: var(--navy);
+  color: white;
+}
+
+.resume-button--primary:hover {
+  background: var(--navy-deep);
+}
+
 @media (max-width: 720px) {
   .placeholder { align-items: flex-start; }
   .placeholder::after { top: auto; right: -260px; bottom: -235px; transform: none; }

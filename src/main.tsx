@@ -36,7 +36,14 @@ function App() {
           <a href="https://www.linkedin.com/in/ian--yang" target="_blank" rel="noreferrer">
             LinkedIn <ArrowUpRight aria-hidden="true" size={13} />
           </a>
-          <a href={`${base}resume/`}>Résumé</a>
+          <a
+            href={`${base}resume/ian-yang-resume.pdf`}
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Open Ian Yang's résumé PDF"
+          >
+            Résumé <ArrowUpRight aria-hidden="true" size={13} />
+          </a>
         </nav>
       </header>
 
