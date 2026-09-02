@@ -16,7 +16,11 @@ body {
   line-height: 1.65;
 }
 
-img { display: block; max-width: 100%; }
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
 figure { margin: 0; }
 
 .page-nav {
@@ -104,7 +108,6 @@ figure { margin: 0; }
 .hero-photo {
   position: relative;
   overflow: hidden;
-  aspect-ratio: 3 / 4;
   background: var(--p0-dark);
   box-shadow: 0 20px 50px rgba(7, 25, 44, 0.18);
 }
@@ -113,8 +116,8 @@ figure { margin: 0; }
 
 .hero-photo img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
+  object-fit: contain;
 }
 
 .hero-photo span {
@@ -258,8 +261,8 @@ figure { margin: 0; }
 
 .photo-card img {
   width: 100%;
-  aspect-ratio: 3 / 4;
-  object-fit: cover;
+  height: auto;
+  object-fit: contain;
 }
 
 .photo-card figcaption {
@@ -339,14 +342,10 @@ figure { margin: 0; }
   font-size: 0.95rem;
 }
 
-.explanation .technical-note {
-  padding-top: 22px;
-  border-top: 1px solid rgba(255, 255, 255, 0.16);
-  color: #abb8c4;
-  font-size: 0.76rem;
+.explanation--single {
+  grid-template-columns: minmax(0, 780px);
+  justify-content: center;
 }
-
-.explanation a { color: var(--p0-gold); text-decoration: underline; text-underline-offset: 3px; }
 
 .architecture-grid {
   display: grid;
@@ -363,12 +362,9 @@ figure { margin: 0; }
 
 .architecture-image img {
   width: 100%;
-  aspect-ratio: 3 / 4;
-  object-fit: cover;
-  transition: transform 500ms ease;
+  height: auto;
+  object-fit: contain;
 }
-
-.architecture-card:hover .architecture-image img { transform: scale(1.015); }
 
 .image-index {
   position: absolute;
@@ -484,8 +480,8 @@ figure { margin: 0; }
 
 .sequence-strip img {
   width: 100%;
-  aspect-ratio: 3 / 4;
-  object-fit: cover;
+  height: auto;
+  object-fit: contain;
   filter: saturate(0.92);
 }
 
@@ -581,5 +577,4 @@ figure { margin: 0; }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .architecture-image img { transition: none; }
 }
