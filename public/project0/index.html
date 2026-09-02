@@ -3,13 +3,212 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Ian Yang's CS 180 Project 0." />
+  <meta name="description" content="Three camera experiments by Ian Yang exploring portrait perspective, architectural compression, and the dolly zoom." />
+  <meta property="og:title" content="Project 0 · Camera &amp; Perspective — Ian Yang" />
+  <meta property="og:description" content="Portrait perspective, architectural compression, and a hand-built dolly zoom." />
+  <meta property="og:image" content="https://ian-tc-yang.github.io/cs180/project0/assets/dolly-05x.jpg" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Project 0 · Camera &amp; Perspective — Ian Yang" />
+  <meta name="twitter:description" content="Portrait perspective, architectural compression, and a hand-built dolly zoom." />
+  <meta name="twitter:image" content="https://ian-tc-yang.github.io/cs180/project0/assets/dolly-05x.jpg" />
   <link rel="icon" href="/cs180/favicon.svg" />
   <link rel="stylesheet" href="/cs180/assets/project-page.css" />
+  <link rel="stylesheet" href="/cs180/project0/project0.css" />
   <title>Project 0 · Camera &amp; Perspective — Ian Yang</title>
 </head>
 <body>
-  <nav class="page-nav"><a class="brand" href="/cs180/"><span class="brand-mark">IY</span> CS 180</a><a class="back-link" href="/cs180/">← All projects</a></nav>
-  <main class="placeholder"><div class="placeholder-copy"><p class="kicker">Project 00</p><h1>Camera &amp; <em>Perspective</em></h1><p class="status">Write-up coming soon.</p></div></main>
+  <nav class="page-nav" aria-label="Project navigation">
+    <a class="brand" href="/cs180/"><span class="brand-mark">IY</span> CS 180</a>
+    <a class="back-link" href="/cs180/">← All projects</a>
+  </nav>
+
+  <main>
+    <header class="project-hero">
+      <div class="hero-copy">
+        <p class="kicker">Project 00 · Camera &amp; Perspective</p>
+        <h1>One subject.<br /><em>Many perspectives.</em></h1>
+        <p class="hero-lede">Three experiments reveal a simple photographic truth: perspective comes from where the camera stands. Zoom changes the framing; distance changes the geometry.</p>
+        <div class="project-meta" aria-label="Project details">
+          <span>Shot on iPhone 17</span>
+          <span>17 source photographs</span>
+          <span>3 experiments</span>
+        </div>
+      </div>
+
+      <figure class="hero-comparison">
+        <div class="hero-photo">
+          <img src="/cs180/project0/assets/portrait-anton-05x.jpg" alt="Anton photographed very close with the ultra-wide camera" width="1650" height="2200" />
+          <span><b>0.5×</b> Close</span>
+        </div>
+        <div class="hero-photo hero-photo--shifted">
+          <img src="/cs180/project0/assets/portrait-anton-10x.jpg" alt="Anton photographed from farther away at 10 times zoom" width="1650" height="2200" />
+          <span><b>10×</b> Far</span>
+        </div>
+        <figcaption>Similar framing, radically different camera distance.</figcaption>
+      </figure>
+    </header>
+
+    <nav class="section-nav" aria-label="Project sections">
+      <a href="#part-1"><span>01</span> Portrait perspective</a>
+      <a href="#part-2"><span>02</span> Architecture</a>
+      <a href="#part-3"><span>03</span> Dolly zoom</a>
+    </nav>
+
+    <section class="project-section" id="part-1" aria-labelledby="part-1-title">
+      <div class="section-intro">
+        <p class="section-number">01</p>
+        <div>
+          <p class="kicker">The wrong way vs. the right way</p>
+          <h2 id="part-1-title">Selfies &amp; portrait perspective</h2>
+          <p>I photographed Anton and myself at four zoom levels, stepping farther away each time so our faces remained roughly the same size in the frame.</p>
+        </div>
+      </div>
+
+      <article class="subject-block" aria-labelledby="anton-title">
+        <div class="subject-heading">
+          <h3 id="anton-title">Anton</h3>
+          <span>Close &amp; wide → far &amp; zoomed</span>
+        </div>
+        <div class="portrait-grid">
+          <figure class="photo-card photo-card--wrong">
+            <img src="/cs180/project0/assets/portrait-anton-05x.jpg" alt="Anton at 0.5 times zoom and 13 millimeter equivalent" width="1650" height="2200" loading="lazy" />
+            <figcaption><strong>0.5×</strong><span>13 mm equivalent</span><small>Ultra Wide · closest</small></figcaption>
+          </figure>
+          <figure class="photo-card">
+            <img src="/cs180/project0/assets/portrait-anton-1x.jpg" alt="Anton at 1 times zoom and 26 millimeter equivalent" width="1650" height="2200" loading="lazy" />
+            <figcaption><strong>1×</strong><span>26 mm equivalent</span><small>Main camera</small></figcaption>
+          </figure>
+          <figure class="photo-card">
+            <img src="/cs180/project0/assets/portrait-anton-5x.jpg" alt="Anton at 5 times zoom and approximately 130 millimeter equivalent" width="1650" height="2200" loading="lazy" />
+            <figcaption><strong>5×</strong><span>≈130 mm equivalent</span><small>Digital zoom</small></figcaption>
+          </figure>
+          <figure class="photo-card photo-card--right">
+            <img src="/cs180/project0/assets/portrait-anton-10x.jpg" alt="Anton at 10 times zoom and approximately 260 millimeter equivalent" width="1650" height="2200" loading="lazy" />
+            <figcaption><strong>10×</strong><span>≈260 mm equivalent</span><small>Digital zoom · farthest</small></figcaption>
+          </figure>
+        </div>
+      </article>
+
+      <article class="subject-block" aria-labelledby="ian-title">
+        <div class="subject-heading">
+          <h3 id="ian-title">Ian</h3>
+          <span>Close &amp; wide → far &amp; zoomed</span>
+        </div>
+        <div class="portrait-grid">
+          <figure class="photo-card photo-card--wrong">
+            <img src="/cs180/project0/assets/portrait-ian-05x.jpg" alt="Ian at 0.5 times zoom and 13 millimeter equivalent" width="1650" height="2200" loading="lazy" />
+            <figcaption><strong>0.5×</strong><span>13 mm equivalent</span><small>Ultra Wide · closest</small></figcaption>
+          </figure>
+          <figure class="photo-card">
+            <img src="/cs180/project0/assets/portrait-ian-1x.jpg" alt="Ian at 1 times zoom and 26 millimeter equivalent" width="1650" height="2200" loading="lazy" />
+            <figcaption><strong>1×</strong><span>26 mm equivalent</span><small>Main camera</small></figcaption>
+          </figure>
+          <figure class="photo-card">
+            <img src="/cs180/project0/assets/portrait-ian-5x.jpg" alt="Ian at 5 times zoom and approximately 130 millimeter equivalent" width="1650" height="2200" loading="lazy" />
+            <figcaption><strong>5×</strong><span>≈130 mm equivalent</span><small>Digital zoom</small></figcaption>
+          </figure>
+          <figure class="photo-card photo-card--right">
+            <img src="/cs180/project0/assets/portrait-ian-10x.jpg" alt="Ian at 10 times zoom and approximately 260 millimeter equivalent" width="1650" height="2200" loading="lazy" />
+            <figcaption><strong>10×</strong><span>≈260 mm equivalent</span><small>Digital zoom · farthest</small></figcaption>
+          </figure>
+        </div>
+      </article>
+
+      <aside class="explanation" aria-labelledby="portrait-why">
+        <p class="explanation-label">Why does the second portrait look better?</p>
+        <div>
+          <h3 id="portrait-why">Distance—not zoom—changes the face.</h3>
+          <p>At very close range, the nose is proportionally much closer to the camera than the ears, so it projects larger while the sides of the face fall away. Stepping back makes those depth differences small compared with the total camera distance, producing flatter, more natural-looking proportions. Zooming in only restores the original framing after the camera moves back.</p>
+          <p class="technical-note">The focal-length labels describe 35 mm-equivalent angle of view. Apple lists 13 mm at 0.5× and 26 mm at 1×; the 5× and 10× values are approximate 26 mm-based digital-crop equivalents. The softness at high zoom is a resolution trade-off, separate from the perspective change. <a href="https://www.apple.com/iphone-17/specs/" target="_blank" rel="noreferrer">Camera specifications ↗</a></p>
+        </div>
+      </aside>
+    </section>
+
+    <section class="project-section project-section--paper" id="part-2" aria-labelledby="part-2-title">
+      <div class="section-intro">
+        <p class="section-number">02</p>
+        <div>
+          <p class="kicker">The same principle in reverse</p>
+          <h2 id="part-2-title">Architectural perspective compression</h2>
+          <p>I first photographed the facade from across the field with zoom, then walked toward the building and photographed it without zoom while keeping the building at a similar scale.</p>
+        </div>
+      </div>
+
+      <div class="architecture-grid">
+        <figure class="architecture-card">
+          <div class="architecture-image">
+            <img src="/cs180/project0/assets/architecture-far.jpg" alt="Genetics and Plant Biology building photographed from far away with zoom" width="1650" height="2200" loading="lazy" />
+            <span class="image-index">A</span>
+          </div>
+          <figcaption><strong>Far + zoomed</strong><span>Compressed perspective</span><p>The facade reads flatter: depth along the building is reduced and repeated windows appear closer in scale.</p></figcaption>
+        </figure>
+        <figure class="architecture-card">
+          <div class="architecture-image">
+            <img src="/cs180/project0/assets/architecture-close.jpg" alt="Genetics and Plant Biology building photographed nearby without zoom" width="1650" height="2200" loading="lazy" />
+            <span class="image-index">B</span>
+          </div>
+          <figcaption><strong>Close + unzoomed</strong><span>Expanded perspective</span><p>The near wall grows relative to the far side, and the receding roofline and facade become more dramatic.</p></figcaption>
+        </figure>
+      </div>
+
+      <aside class="explanation explanation--light" aria-labelledby="architecture-why">
+        <p class="explanation-label">What creates the compression?</p>
+        <div>
+          <h3 id="architecture-why">Camera position controls relative scale.</h3>
+          <p>From far away, the distance from the camera to the near and far parts of the building differs only slightly, so they project at nearly the same relative size. Up close, that distance ratio grows: nearby surfaces loom while farther surfaces shrink. The long view feels compressed because zoom crops a narrow field of view from a distant position—it does not flatten space by itself.</p>
+        </div>
+      </aside>
+    </section>
+
+    <section class="project-section project-section--dark" id="part-3" aria-labelledby="part-3-title">
+      <div class="section-intro section-intro--dark">
+        <p class="section-number">03</p>
+        <div>
+          <p class="kicker">The Vertigo shot</p>
+          <h2 id="part-3-title">The dolly zoom</h2>
+          <p>I moved the camera backward while increasing zoom, trying to hold Totoro at roughly the same size as the room changed around it.</p>
+        </div>
+      </div>
+
+      <div class="dolly-feature">
+        <figure class="gif-frame">
+          <img src="/cs180/project0/assets/dolly-zoom.gif" alt="Animated dolly zoom of a Totoro plush as the camera moves backward and zooms in" width="600" height="800" loading="eager" />
+          <figcaption>0.5× → 15× → 0.5× · 12-frame loop</figcaption>
+        </figure>
+        <div class="dolly-copy">
+          <p class="kicker">Animated result</p>
+          <h3>Totoro stays. The room moves.</h3>
+          <p>Because camera distance and focal length change together, the subject stays near the center at a similar scale while the background’s perspective transforms. The wide, close frame stretches the table and reveals more of the room; the distant, zoomed frame flattens those depth cues and narrows the field of view.</p>
+          <ol>
+            <li><span>01</span>Lock the subject near the center.</li>
+            <li><span>02</span>Step backward between each still.</li>
+            <li><span>03</span>Increase zoom to recover the subject’s size.</li>
+          </ol>
+          <p class="loop-note">The animation reverses after the 15× frame so the spatial change is easy to inspect in both directions. This is the still-photo version of the classic <a href="https://en.wikipedia.org/wiki/Dolly_zoom" target="_blank" rel="noreferrer">dolly zoom ↗</a>.</p>
+        </div>
+      </div>
+
+      <div class="frame-sequence" aria-label="Dolly zoom source frame sequence">
+        <div class="sequence-heading"><h3>Source sequence</h3><span>Move back · zoom in</span></div>
+        <div class="sequence-strip">
+          <figure><img src="/cs180/project0/assets/dolly-05x.jpg" alt="Dolly zoom source frame at 0.5 times zoom" width="1650" height="2200" loading="lazy" /><figcaption>0.5×</figcaption></figure>
+          <figure><img src="/cs180/project0/assets/dolly-1x.jpg" alt="Dolly zoom source frame at 1 times zoom" width="1650" height="2200" loading="lazy" /><figcaption>1×</figcaption></figure>
+          <figure><img src="/cs180/project0/assets/dolly-2x.jpg" alt="Dolly zoom source frame at 2 times zoom" width="1650" height="2200" loading="lazy" /><figcaption>2×</figcaption></figure>
+          <figure><img src="/cs180/project0/assets/dolly-3x.jpg" alt="Dolly zoom source frame at 3 times zoom" width="1650" height="2200" loading="lazy" /><figcaption>3×</figcaption></figure>
+          <figure><img src="/cs180/project0/assets/dolly-5x.jpg" alt="Dolly zoom source frame at 5 times zoom" width="1650" height="2200" loading="lazy" /><figcaption>5×</figcaption></figure>
+          <figure><img src="/cs180/project0/assets/dolly-10x.jpg" alt="Dolly zoom source frame at 10 times zoom" width="1650" height="2200" loading="lazy" /><figcaption>10×</figcaption></figure>
+          <figure><img src="/cs180/project0/assets/dolly-15x.jpg" alt="Dolly zoom source frame at 15 times zoom" width="1650" height="2200" loading="lazy" /><figcaption>15×</figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <nav class="project-pager" aria-label="More projects">
+      <a href="/cs180/"><span>Portfolio</span><strong>← All projects</strong></a>
+      <a href="/cs180/project1/"><span>Next</span><strong>Project 01 →</strong></a>
+    </nav>
+  </main>
+
+  <footer class="project-footer"><span>Ian Yang · EECS</span><span>UC Berkeley CS 180</span></footer>
 </body>
 </html>
