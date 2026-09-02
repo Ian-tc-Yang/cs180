@@ -64,14 +64,6 @@ figure { margin: 0; }
 
 .hero-copy h1 em { display: inline-block; }
 
-.hero-lede {
-  max-width: 690px;
-  margin: 34px 0 0;
-  color: #405061;
-  font-size: clamp(1rem, 1.65vw, 1.24rem);
-  line-height: 1.7;
-}
-
 .project-meta {
   display: flex;
   flex-wrap: wrap;
@@ -340,11 +332,6 @@ figure { margin: 0; }
   margin: 26px 0 0;
   color: #dbe2e8;
   font-size: 0.95rem;
-}
-
-.explanation--single {
-  grid-template-columns: minmax(0, 780px);
-  justify-content: center;
 }
 
 .architecture-grid {
